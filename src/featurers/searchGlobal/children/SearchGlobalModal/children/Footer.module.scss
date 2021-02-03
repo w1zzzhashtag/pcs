@@ -1,0 +1,27 @@
+@import './../../../../../assets/styles/vars.module.scss';
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 1.5em;
+  font-size: 0.8em;
+  color: rgba($clr-grey-light, .7);
+  &__keyboardShortcut {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $clr-grey-dark;
+    padding: .35em .6em .25em;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+  }
+}

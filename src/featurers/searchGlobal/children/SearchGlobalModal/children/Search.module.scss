@@ -1,0 +1,31 @@
+@import './../../../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  padding: .75em;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  font-size: 1.5em;
+  left: .75em;
+  width: 1em;
+}
+
+.clearBtn {
+  font-size: 1.5em;
+  line-height: .75;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: .75em;
+  width: .75em;
+  height: .75em;
+  color: rgba($clr-grey-light, .7);
+  transition: .2s;
+  &:hover {
+      color: $clr-green;
+  }
+}

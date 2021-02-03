@@ -1,0 +1,24 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  composes: wrapper from './../catalogProduct/CatalogProductPG.module.scss'
+}
+
+.form {
+  composes: form from './../catalogProduct/CatalogProductPG.module.scss'
+}
+
+.button {
+  &__container {
+    composes: button__container from './../catalogProduct/CatalogProductPG.module.scss';
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2em;
+  }
+  &__wrapper {
+    composes: button__wrapper from './../catalogProduct/CatalogProductPG.module.scss';
+    margin-left: 1.5em;
+  }
+}

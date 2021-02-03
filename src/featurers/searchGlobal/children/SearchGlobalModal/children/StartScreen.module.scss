@@ -1,0 +1,24 @@
+@import './../../../../../assets/styles/vars.module.scss';
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  composes: block from './Results.module.scss';
+  &__title {
+    composes: block__title from './Results.module.scss'; 
+  }
+}
+
+.item {
+  composes: item from './Results.module.scss';
+}
+
+.noResult {
+  text-align: center;
+  font-size: .9em;
+  color: rgba($clr-grey-light, .7);
+}

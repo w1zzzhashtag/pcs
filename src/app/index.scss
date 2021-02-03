@@ -1,0 +1,39 @@
+@import './../assets/styles/fonts.module.scss';
+@import './../assets/styles/vars.module.scss';
+@import './global.scss';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: $clr-grey-light;
+}
+*::-webkit-scrollbar-thumb {
+  background: $clr-green;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+

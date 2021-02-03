@@ -1,0 +1,128 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 1.5em 2.5em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  &.light {
+    background-color: #fff;
+    border: 1px solid rgba($clr-grey-dark, .1);
+    box-shadow: 2px 2px 5px rgba($clr-grey-dark, .2);
+    .print {
+      fill: $clr-grey;
+    }
+  }
+  &.dark {
+    background-color: $clr-grey;
+    border: 1px solid rgba($clr-grey-dark, 0);
+    .print {
+      fill: $clr-grey-light;
+    }
+  }
+}
+.text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &.light {
+    .text__name {
+      color: $clr-grey-dark;
+    }
+    .text__okpd2Code {
+      color: $clr-grey-dark;
+    }
+    .text__item {
+      color: $clr-grey;
+      &__title {
+        color: $clr-grey-dark;
+      }
+    }
+  }
+  &.dark {
+    .text__name {
+      color: #fff;
+    }
+    .text__okpd2Code {
+      color: #fff;
+    }
+    .text__item {
+      color: $clr-grey-light;
+      &__title {
+        color: #fff;
+      }
+    }
+  }
+  &__name {
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: .5em;
+  }
+  &__okpd2Code {
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: .5em;
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 0.85em;
+    margin: 1em 0;
+    &__title {
+      font-weight: 800;
+    }
+  }
+}
+
+.otherInfo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  &.light {
+    .otherInfo__item {
+      &__title {
+        color: $clr-grey-dark;
+      }
+      &__value {
+        color: $clr-grey;
+      }
+    }
+  }
+  &.dark {
+    .otherInfo__item {
+      &__title {
+        color: #fff;
+      }
+      &__value {
+        color: $clr-grey-light;
+      }
+    }
+  }
+  &__item {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+    &__title {
+      font-weight: 700;
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+.print {
+  width: 5%;
+  cursor: pointer;
+  transition: .4s;
+}
+

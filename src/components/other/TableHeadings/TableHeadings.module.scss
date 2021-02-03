@@ -1,0 +1,23 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  display: flex;
+  &.light {
+    border-bottom: 1px solid rgba($clr-grey, .1);
+    .item {
+      color: $clr-grey;
+    }
+  }
+  &.dark {
+    border-bottom: 1px solid rgba($clr-grey-light, .1);
+    .item {
+      color: $clr-grey-light;
+    }
+  }
+}
+
+.item {
+  padding: 1em;
+  font-weight: 700;
+  line-height: 1;
+}

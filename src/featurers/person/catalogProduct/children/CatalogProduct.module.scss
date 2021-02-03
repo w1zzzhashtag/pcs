@@ -1,0 +1,197 @@
+@import './../../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.basic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.images {
+  width: 100%;
+  margin-bottom: 2em;
+  &.light {
+    .images {
+      &__placeholder {
+        background-color: $clr-grey-light;
+      }
+      &__input__count {
+        color: $clr-grey-dark;
+      }
+    }
+  }
+  &.dark {
+    .images {
+      &__placeholder {
+        background-color: $clr-grey;
+      }
+      &__input__count {
+        color: $clr-grey-light;
+      }
+    }
+  }
+  &__title {
+    width: 100%;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 110px;
+    font-size: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    &__item {
+      width: 23%;
+      margin-right: 2.6%;
+      height: 100%;
+      border-radius: .25em;
+      overflow: hidden;
+      position: relative;
+      z-index: 10;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__close {
+        position: absolute;
+        top: .25em;
+        right: .25em;
+        font-size: 1.2em;
+        line-height: 1em;
+        padding: 0 0.2em;
+        cursor: pointer;
+        border-radius: .25em;
+        background-color:$clr-red;
+        color: #fff;
+      }
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+    
+  }
+  &__placeholder {
+    position: absolute;
+    width: 23%;
+    margin-right: 2.6%;
+    height: 100%;
+    border-radius: .25em;
+    overflow: hidden;
+    &.item1 {
+      left: 0;
+    }
+    &.item2 {
+      left: 25.6%; 
+    }
+    &.item3 {
+      left: 51.2%;
+    }
+    &.item4 {
+      left: 76.8%;
+    }
+  }
+  &__input {
+    display: none;
+    &__container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__label {
+      composes: text from './../../../../components/inputs/PopupField/PopupField.module.scss';
+      &.disabled {
+        transition: .2s;
+        pointer-events: none;
+        opacity: .3;
+      }
+    }
+    &__count {
+      font-size: .95em;
+      font-weight: 600;
+      margin-left: 1em;
+    }
+  }
+}
+
+.catalog {
+  width: 45%;
+  &__modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.characts {
+  width: 100%;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &.light {
+    .characts__row .characts__item{
+      border-bottom: 1px solid $clr-grey-light;
+    }
+  }
+  &.dark {
+    .characts__row .characts__item{
+      border-bottom: 1px solid $clr-grey;
+    }
+  }
+  &__form, &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: .5em;
+    position: relative;
+  }
+  &__row .characts__item {
+    padding: 0 .25em;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;  
+  }
+  &__item {
+    width: 31%;
+    margin-bottom: 0;
+  }
+  &__button {
+    position: absolute;
+    left: 101%;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &.add, &.delete {
+      img {width: 100%;}
+    }
+    &.add {
+      width: 45px;
+      height: 45px;
+      bottom: .5em;
+    }
+    &.delete {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

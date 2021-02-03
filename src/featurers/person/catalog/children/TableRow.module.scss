@@ -1,0 +1,11 @@
+@import './../../../../assets/styles/vars.module.scss';
+
+
+.edit, .delete {
+  width: 25px;
+  background-color: transparent;
+  border: none;
+  img {
+    width: 100%;
+  }
+}

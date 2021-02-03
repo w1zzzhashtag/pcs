@@ -1,0 +1,25 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.map, .upperLayer {
+    width: 100%;
+    height: 500px;
+    border-radius: .25em;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba($clr-grey-dark, .3);
+}
+
+.upperLayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &.light {
+        background-color: $clr-grey-light;
+        color: $clr-grey-dark;
+    }
+    &.dark {
+        background-color: $clr-grey;
+        color: $clr-grey-light;
+    }
+}
+

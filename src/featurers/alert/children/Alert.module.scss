@@ -1,0 +1,40 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  position: fixed;
+  top: calc(#{$height-header-top} + #{$height-header-bottom} + 50px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.container {
+  position: relative;
+  padding: 1.5em 2.5em;
+  text-align: center;
+  max-width: 500px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 800;
+  border-radius: .5em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(45, 45, 45, 0.4);
+  &.success {
+    background-color: $clr-green;
+  }
+  &.error {
+    background-color: $clr-red;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.2em;
+  right: .5em;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.4em;
+  line-height: 1;
+}

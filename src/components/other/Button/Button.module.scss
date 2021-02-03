@@ -1,0 +1,89 @@
+@import './../../../assets/styles/vars.module.scss';
+
+
+.button {
+  font-size: 1em;
+  font-weight: 700;
+  padding: .5em 1em;
+  border-radius: .25em;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  opacity: 1;
+  transition: .2s;
+  &:hover {
+    box-shadow: 4px 4px 0px rgba($clr-grey-dark, .2);
+  }
+  &:disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+
+  // Ширина
+  &.w100 {
+    width: 100%;
+  }
+
+
+  // Цвета
+  &.green {
+    background-color: $clr-green;
+    border: 2px solid $clr-green;
+    &:hover {
+      background-color: #fff;
+      color: $clr-green;
+    }
+  }
+  &.red {
+    background-color: $clr-red;
+    border: 2px solid $clr-red;
+    &:hover {
+      background-color: #fff;
+      color: $clr-red;
+    }
+  }
+  &.orange {
+    background-color: $clr-orange;
+    border: 2px solid $clr-orange;
+    &:hover {
+      background-color: #fff;
+      color: $clr-orange;
+    }
+  }
+  &.white {
+    &.light {
+      color: $clr-grey;
+      background-color: #fff;
+      border: 2px solid $clr-grey;
+      &:hover {
+        background-color: $clr-grey;
+        color:#fff;
+      }
+    }
+    &.dark {
+      color: $clr-grey-light;
+      background-color: rgba($clr-grey-dark, .5);
+      border: 2px solid $clr-grey-light;
+      &:hover {
+        background-color: $clr-grey-light;
+        color: rgba($clr-grey-dark, 1);
+        border: 2px solid rgba($clr-grey-dark, 1);
+      }
+    }
+  }
+
+
+  // Прочее
+  &.uppercase {
+    text-transform: uppercase;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+  &.rounded {
+    border-radius: 1.5em;
+    padding: .5em 1.5em;
+  }
+}

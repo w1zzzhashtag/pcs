@@ -1,0 +1,58 @@
+@import './../../assets/styles/vars.module.scss';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: color .2s;
+    &.light {
+        color: $clr-grey;
+    }
+    &.dark {
+        color: $clr-grey-light;
+    }
+    section {
+        width: 100%;
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+.title {
+    color: inherit;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+
+.catalog, .popularProducts, .topManufacturers {
+    align-items: center;
+}
+
+.topManufacturers {
+    &__map, &__upperLayer {
+        width: 99%;
+        height: 350px;
+        transform: translateY(-2.5em);
+        z-index: 0;
+        box-shadow: 2px 2px 5px rgba($clr-grey-dark, .3);
+        border-radius: 0.5em;
+        overflow: hidden;
+    }
+    &__upperLayer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &.light {
+            background-color: $clr-grey-light;
+            color: $clr-grey-dark;
+        }
+        &.dark {
+            background-color: $clr-grey;
+            color: $clr-grey-light;
+        }
+    }
+}

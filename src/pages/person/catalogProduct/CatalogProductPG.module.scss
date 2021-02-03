@@ -1,0 +1,33 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  h6 {
+    width: 100%;
+    margin-bottom: .5em;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+}
+
+.button {
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2em;
+  }
+  &__wrapper {
+    margin-left: 1.5em;
+  }
+}

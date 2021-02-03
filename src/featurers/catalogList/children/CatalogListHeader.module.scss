@@ -1,0 +1,20 @@
+@import './../../../assets/styles/vars.module.scss';
+
+
+.link {
+    width: 100%;
+    background-color: transparent;
+    padding: .75em 1em;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba($clr-grey-dark, .1);
+    transition: .4s;
+    &:hover {
+        background-color: rgba(#fff, .3);
+        text-shadow: 0 0 2px #fff;
+    }
+    &_active {
+        background-color: $clr-orange;
+        text-shadow: 0 0 2px #fff;
+    }
+}

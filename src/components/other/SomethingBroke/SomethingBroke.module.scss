@@ -1,0 +1,26 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  align-self: flex-start;
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: .5em;
+  font-weight: 800;
+}
+
+.error {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  font-weight: 300;
+  color: $clr-red;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 1.25em;
+}

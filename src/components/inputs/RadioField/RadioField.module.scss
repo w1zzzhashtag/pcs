@@ -1,0 +1,52 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  width: 100%;
+  padding: .4em .2em;
+  font-size: 0.9em;
+  &.w50 {
+    width: 50%;
+  }
+}
+
+.input {
+  display: none;
+  & + label {
+    width: 100%;
+    padding-left: 2em;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      border: 2px solid $clr-green;
+      background-color: $clr-grey-light;    
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: .5em;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0.4em;
+      height: 0.4em;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: .2s;
+    }
+  }
+  &:checked + label {
+    &::after {
+      background-color: $clr-green;
+    }
+  }
+}

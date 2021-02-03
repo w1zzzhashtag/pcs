@@ -1,0 +1,70 @@
+@import './../../../assets/styles/vars.module.scss';
+
+
+.wrapper {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.5em;
+  &.light {
+    .input {
+      border: 1px solid $clr-grey-light;
+      box-shadow: 2px 2px 5px rgba($clr-grey-dark, .1);
+      &:focus {
+        border: 1px solid $clr-grey;
+        box-shadow: 2px 2px 5px rgba($clr-grey-dark, .2);
+      }
+    }
+  }
+  &.dark {
+    .input {
+      border: 1px solid transparent;
+      background-color: $clr-grey !important;
+    }
+  }
+}
+.item {
+  position: relative;
+  margin-right: 1.5em;
+  &__name, &__products {
+    width: 25%;
+  }
+  &__inn {
+    width: 20%;
+  }
+}
+
+.input {
+  width: 100%;
+  border-radius: .25em;
+  font-size: .9em;
+  padding: .5em .75em;
+  transition: .2s;
+  &:focus + label {
+    bottom: 110%;
+    transform: scale(.8);
+    transform-origin: left;
+  }
+}
+
+.label {
+  position: absolute;
+  left: .75em;
+  bottom: .6em;
+  font-size: .8em;
+  transition: 0.4s;
+  pointer-events: none;
+  &_active {
+    bottom: 110%;
+    transform: scale(.8);
+    transform-origin: left;
+  }
+}
+
+.btn__wrapper {
+  font-size: 0.9em;
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,126 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+    width: 100%;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: .4s;
+    transform-origin: 0;
+    &.light {
+        border: 1px solid rgba($clr-grey-dark, .1);
+        box-shadow: 2px 2px 5px rgba($clr-grey-dark, .2);
+        background-color: #fff;
+    }
+    &.dark {
+        background-color: $clr-grey;
+        border: 1px solid rgba($clr-grey-dark, 0);
+    }
+}
+
+.hovered {
+    transform: scale(1.015) translateX(2px);
+    box-shadow: 4px 4px 10px rgba($clr-grey-dark, .1);
+}
+
+.image {
+    &_wrap {
+        width: 130px;
+        height: 130px;
+    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inner {
+    width: calc(100% - 150px);
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 65%;
+    font-size: 0.9em;
+    &.light {
+        .text__nameGroup {
+            color: $clr-grey-dark;
+        }
+        .text__okpd2Group, .text__productsCount {
+            color: $clr-grey;
+
+        }
+    }
+    &.dark {
+        .text__nameGroup {
+            color: #fff;
+        }
+        .text__okpd2Group, .text__productsCount {
+            color: $clr-grey-light;
+
+        }
+    }
+    &__nameGroup {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 1em;
+    }
+    &__okpd2Group, &__productsCount {
+        margin-bottom: .5em;
+        font-size: 0.95em;
+        font-weight: 600;
+        span {
+            font-weight: 400;
+        }
+    }
+}
+
+.otherInfo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end; 
+    text-align: right;
+    font-size: 0.85em;
+    &.light {
+        .otherInfo__item {
+            &__title {
+                color: $clr-grey-dark;
+            }
+            &__value {
+                color: $clr-grey;
+            }
+        }
+    }
+    &.dark {
+        .otherInfo__item {
+            &__title {
+                color: #fff;
+            }
+            &__value {
+                color: $clr-grey-light;
+            }
+        }
+    }
+    &__item {
+        margin-bottom: .5em;
+        &__title {
+            font-weight: 700;
+            margin-bottom: 0.3em;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  &__link {
+    position: relative;
+    font-weight: 600;
+    padding-left: 2em;
+    color: $clr-green;
+    transition: .4s;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5em;
+      height: 1.5em;
+      background: url('./../../../assets/images/person/plus.png') center / cover no-repeat;
+    }
+    &:hover {
+      text-shadow: .1em .1em .2em rgba($clr-green, .4);
+      text-decoration: underline;
+    }
+  }
+}

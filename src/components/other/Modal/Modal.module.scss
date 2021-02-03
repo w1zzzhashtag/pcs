@@ -1,0 +1,32 @@
+@import './../../../assets/styles/vars.module.scss';
+
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1em;
+  background-color: rgba($clr-grey-dark, .8);
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1em;
+  right: 1em;  
+  font-size: 3em;
+  line-height: 1;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+      text-shadow: 0 0 .5em rgba(#fff, 1)
+  }
+}

@@ -1,0 +1,25 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    &__item {
+        color: inherit;
+        margin-right: .2em;
+        &_active {
+            color: $clr-green;
+        }
+    }
+}

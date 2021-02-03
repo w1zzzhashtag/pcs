@@ -1,0 +1,37 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+  font-size: 1em;
+  &.light {
+    .item {
+      color: $clr-grey;
+      border-bottom: 1px dashed $clr-grey;
+      &.active {
+        text-shadow: 0 0 .25em rgba($clr-grey, .5);
+      }
+    }
+  }
+  &.dark {
+    .item {
+      color: $clr-grey-light;
+      border-bottom: 1px dashed $clr-grey-light;
+      &.active {
+        text-shadow: 0 0 .25em $clr-grey-light;
+      }
+    }
+  }
+}
+
+.item {
+  background-color: transparent;
+  border: none;
+  color: $clr-grey;
+  font-size: 1em;
+  margin: 0 1em;
+  border-bottom: 1px dashed $clr-grey;
+  opacity: 0.7;
+  transition: .2s;
+  &.active {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,64 @@
+
+
+.wrapper {
+  width: 45%;
+}
+
+.modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  font-size: 0.8em;
+  height: 350px;
+  padding-right: 1.75em;
+}
+
+.dynatree {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding: .5em 0 .5em 1.75em;
+  &.active {
+    padding-bottom: 0;        
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: .75em 0 0;
+  }
+  &__checkbox {
+    composes: input from './../../../components/inputs/RadioField/RadioField.module.scss'
+  }
+  &__title {
+    font-size: 1em;
+    cursor: pointer;
+    b {
+      margin-right: .75em;
+    }
+  }
+  &__expander {
+    position: absolute;
+    left: 0;
+    top: .7em;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+    transition: .2s;
+    &.active {
+      transform: rotate(90deg);
+    }
+  }
+}

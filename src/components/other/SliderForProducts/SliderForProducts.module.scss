@@ -1,0 +1,158 @@
+
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+    width: 100%;
+    padding-top: 1em;
+    &.light {
+        color: $clr-grey;
+    }
+    &.dark {
+        color: $clr-grey-light;
+    }
+}
+.title {
+    font-weight: 600;
+    margin-left: 1em;
+    color: inherit;
+}
+
+.item {
+    padding: 1em;
+    &:hover {
+        .content {
+            &::before {
+                width: 100%;
+            }
+        }
+        .image {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.content {
+    border-radius: 0.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    &.light {
+        background-color:#fff;
+        box-shadow: 4px 4px 8px rgba($clr-grey-dark, .5);
+    }
+    &.dark {
+        background-color: $clr-grey;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.15em;
+        background-color: $clr-green;
+        transition: .4s;
+    }
+}
+
+.image {
+    &_wrapper {
+        width: 100%;
+        height: 175px;
+        overflow: hidden;
+        border: 1px solid rgba($clr-grey-dark, .1);
+    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.text {
+    width: 100%;
+    padding: .5em 1em 0.25em 1em;
+    border: 1px solid rgba($clr-grey-dark, .1);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 0.9em;
+    &__productName {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 800;
+        margin-bottom: 0.5em;
+        &.light {
+            color: $clr-grey-dark;
+        }
+        &.dark {
+            color: #fff;
+        }
+    }
+    &__organizationName {
+        line-height: 1.2em;
+        height: 2.4em;
+        overflow: hidden;
+        margin-bottom: 0.25em;
+        font-size: 0.9em;
+        &.light {
+            color: $clr-grey;
+        }
+        &.dark {
+            color: $clr-grey-light;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.light {
+        color: $clr-grey;
+    }
+    &.dark {
+        color: $clr-grey-light;
+    }
+    &__price {
+        color: inherit;
+        font-size: 0.9em;
+    }
+    &__imgMadeInKarelia {
+        height: 100%;
+    }
+}
+
+// slick-slider
+:global .slick-prev, :global .slick-next {
+    left: initial !important;
+    top: initial !important;
+    bottom: 100% !important;
+    &::before {
+        font-size: 30px !important;
+        color: $clr-green !important;
+    }
+}
+:global .slick-prev {
+    right: 55px !important;
+}
+:global .slick-next {
+    right: 20px !important;
+}
+:global .slick-next.slick-disabled:before, 
+:global .slick-prev.slick-disabled:before {
+    opacity: .5 !important;
+}
+
+:global  .slick-track {
+    margin-left: initial !important;
+    margin-right: initial !important;
+}

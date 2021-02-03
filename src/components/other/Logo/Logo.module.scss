@@ -1,0 +1,36 @@
+@import './../../../assets/styles/vars.module.scss'; 
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.img {
+    height: 55px;
+    margin-right: .75em;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    &.light {
+        color: $clr-grey-dark;
+    }
+    &.dark {
+        color: #fff;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.25em;
+    }
+    &__subtitle {
+        font-size: 0.9em;
+        line-height: 1;
+    }
+}

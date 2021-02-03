@@ -1,0 +1,47 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper { 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75em;
+    padding: 1.5em 1em;
+    width: 100%;
+    height: 100%;
+    border-radius: .25em;
+    line-height: 1;
+    width: 11.5%;
+    height: 130px;
+    margin-right: 1.14%;
+    margin-bottom: 1.1em;
+    transition: .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:nth-child(8n) {
+        margin-right: 0;
+    }
+    &.light {
+        color: $clr-green-dark;
+        border: 1px solid $clr-grey-light;
+        box-shadow: 0 0 5px rgba($clr-grey-dark, .2);
+        background: linear-gradient(180deg, rgba($clr-green, .15) 0%, rgba($clr-green, 0.3) 100%);
+    }
+    &.dark {
+        color: $clr-grey-light;
+        border: 1px solid $clr-grey;
+        background-color: $clr-grey;
+    }
+    &__icon {
+        height: 45px;
+        margin-bottom: 1em;
+    }
+}

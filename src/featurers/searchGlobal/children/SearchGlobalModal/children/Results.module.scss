@@ -1,0 +1,63 @@
+@import './../../../../../assets/styles/vars.module.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.block {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__title {
+        color: $clr-green;
+        font-weight: 800;
+        font-size: 1.1em;
+        margin-bottom: 0.35em;
+    }
+}
+
+.item {
+    background-color: rgba($clr-grey-dark, .7);
+    padding: .75em 3em .75em .75em;
+    border-radius: .25em;
+    margin-bottom: .4em;
+    color: rgba($clr-grey-light, .7);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    &::before {
+        content: '';
+        position: absolute;
+        right: .5em;
+        background: url('./../../../../../assets/images/enter-icon.png') center / cover no-repeat;
+        width: 1.75em;
+        height: 1.75em;
+        transform: translateX(200px);
+        transition: .2s;
+    }
+    &:hover {
+        color: #fff;
+        background-color: $clr-green;
+        text-shadow: .1em .1em .2em rgba(#fff, .4);
+        box-shadow: .1em .1em .25em rgba($clr-grey-dark, .3);
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}
+
+.seeAll {
+    align-self: center;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: rgba($clr-grey-light, .7);
+    border-bottom: 2px solid rgba($clr-grey-light, .7);
+}

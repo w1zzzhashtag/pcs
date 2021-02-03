@@ -1,0 +1,29 @@
+@import './../../../assets/styles/vars.module.scss';
+
+.wrapper {
+    width: 100%;
+    font-size: .9em;
+    margin-bottom: .75em; 
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &.w30 {
+      width: 30%;
+    }
+    &.w48 {
+        width: 48%;
+    }
+}
+.select {
+    width: 100%;
+    border: 2px solid $clr-green;
+    border-radius: .25em;
+    font-size: .9em;
+    padding: .5em .75em;
+}
+.label {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
